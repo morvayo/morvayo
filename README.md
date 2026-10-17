@@ -1,4 +1,4 @@
-<picture><img align="right" src="https://raw.githubusercontent.com/morvayo/morvayo/a2ca58c7680c06eb84b3491b0f5dd9f7c775fffb/assets/stack-tiles.svg" width="280" height="108" alt="Java, Kotlin, Gradle, Maven, IntelliJ IDEA; C, C++, C#" /></picture>
+<picture><img align="right" src="https://raw.githubusercontent.com/morvayo/morvayo/33dfc54c707aeb245d572754cb96a8f9f183e05a/assets/stack-tiles.svg" width="280" height="108" alt="Java, Kotlin, Gradle, Maven, IntelliJ IDEA; C, C++, C#" /></picture>
 <img src="https://github.com/morvayo.png" width="100" height="100" alt="morvay27" />
 
 ![People](https://cdn.jsdelivr.net/gh/Readme-Workflows/Readme-Icons@main/icons/octicons/People.svg) `19yo`  
