@@ -1,6 +1,6 @@
-<table>
+<table width="100%">
   <tr>
-    <td width="42%" valign="top">
+    <td width="420" valign="top">
       <img src="https://github.com/morvayo.png" width="100" height="100" alt="morvay27" />
       <br /><br />
       <img src="https://cdn.jsdelivr.net/gh/Readme-Workflows/Readme-Icons@main/icons/octicons/People.svg" width="16" height="16" alt="People" /> <code>19yo</code><br />
@@ -8,7 +8,7 @@
       <br /><br />
       <img src="https://views-counter.vercel.app/badge?pageId=morvay27&amp;leftColor=1E232A&amp;rightColor=D2DCF6&amp;type=total&amp;label=Views&amp;style=lower" alt="Views Counter" />
     </td>
-    <td width="58%" valign="top" align="right">
+    <td width="580" valign="top" align="right">
       <h3>Java &amp; Kotlin</h3>
       <p><code>JVM ecosystem</code></p>
       <p>
