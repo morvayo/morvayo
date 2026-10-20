@@ -5,11 +5,3 @@
 ![Location](https://cdn.jsdelivr.net/gh/Readme-Workflows/Readme-Icons@main/icons/octicons/Repository.svg) `Izmir, Turkiye`
 
 ![Views Counter](https://views-counter.vercel.app/badge?pageId=morvay27&leftColor=1E232A&rightColor=D2DCF6&type=total&label=Views&style=lower)
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/morvayo/morvayo/refs/heads/output/snake-dark.svg?v=2" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/morvayo/morvayo/refs/heads/output/snake.svg?v=2" />
-    <img alt="contribution snake" src="https://raw.githubusercontent.com/morvayo/morvayo/refs/heads/output/snake.svg?v=2" width="100%" />
-  </picture>
-</p>
