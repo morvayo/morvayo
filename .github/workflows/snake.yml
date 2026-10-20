@@ -1,0 +1,41 @@
+name: snake
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 6 * * *"
+  push:
+    branches: [main]
+    paths: [.github/workflows/snake.yml]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: snake
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/snake.svg?color_snake=#d78bb5
+            dist/snake-dark.svg?palette=github-dark&color_snake=#d78bb5
+      - name: publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cd dist
+          git init -b output
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add snake.svg snake-dark.svg
+          git commit -m "update snake animation"
+          git remote add origin "https://github.com/${{ github.repository }}.git"
+          auth=$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)
+          git -c http.extraheader="AUTHORIZATION: basic $auth" push --force origin HEAD:output
