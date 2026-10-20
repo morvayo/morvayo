@@ -26,6 +26,17 @@ jobs:
           outputs: |
             dist/snake.svg?color_snake=#d78bb5
             dist/snake-dark.svg?palette=github-dark&color_snake=#d78bb5
+      - name: remove progress bar
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          for path in Path("dist").glob("*.svg"):
+              svg = path.read_text()
+              svg = re.sub(r'<rect class="u(?: [^"]*)?"[^>]*/>', '', svg)
+              svg = svg.replace('viewBox="-16 -32 880 192"', 'viewBox="-16 -32 880 160"').replace('height="192"', 'height="160"', 1)
+              path.write_text(svg)
+          PY
       - name: publish
         env:
           GH_TOKEN: ${{ github.token }}

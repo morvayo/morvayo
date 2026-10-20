@@ -8,8 +8,8 @@
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/morvayo/morvayo/output/snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/morvayo/morvayo/output/snake.svg" />
-    <img alt="contribution snake" src="https://raw.githubusercontent.com/morvayo/morvayo/output/snake.svg" width="100%" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/morvayo/morvayo/output/snake-dark.svg?v=2" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/morvayo/morvayo/output/snake.svg?v=2" />
+    <img alt="contribution snake" src="https://raw.githubusercontent.com/morvayo/morvayo/output/snake.svg?v=2" width="100%" />
   </picture>
 </p>
