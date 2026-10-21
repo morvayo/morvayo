@@ -4,4 +4,4 @@
 ![People](https://cdn.jsdelivr.net/gh/Readme-Workflows/Readme-Icons@main/icons/octicons/People.svg) `19yo`  
 ![Location](https://cdn.jsdelivr.net/gh/Readme-Workflows/Readme-Icons@main/icons/octicons/Repository.svg) `Izmir, Turkiye`
 
-![Views Counter](https://views-counter.vercel.app/badge?pageId=morvayo&leftColor=1E232A&rightColor=D2DCF6&type=total&label=Views&style=lower)
+![Views Counter](https://views-counter.vercel.app/badge?pageId=morvay27&leftColor=1E232A&rightColor=D2DCF6&type=total&label=Views&style=lower)
