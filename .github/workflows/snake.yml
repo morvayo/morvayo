@@ -24,12 +24,14 @@ jobs:
             dist/snake-dark.svg?palette=github-dark&color_snake=%237c3aed&color_dots=%23161b22,%230e4429,%2326a641,%2339d353,%2377ed91
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: hide progress bar
+      - name: adjust animation playback
         run: |
           python3 - <<'PY'
           from pathlib import Path
+          import re
           for path in Path("dist").glob("*.svg"):
               svg = path.read_text()
+              svg = re.sub(r"\b(\d+)ms\b", lambda match: f"{round(int(match[1]) * 1.4)}ms", svg)
               svg = svg.replace("</style>", ".u{display:none}</style>")
               path.write_text(svg)
           PY
