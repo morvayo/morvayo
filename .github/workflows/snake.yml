@@ -32,7 +32,8 @@ jobs:
           for path in Path("dist").glob("*.svg"):
               svg = path.read_text()
               svg = re.sub(r"\b(\d+)ms\b", lambda match: f"{round(int(match[1]) * 1.4)}ms", svg)
-              svg = svg.replace("</style>", ".u{display:none}</style>")
+              svg = re.sub(r"translate\(([^()]+)\)", r"translate3d(\1,0px)", svg)
+              svg = svg.replace("</style>", ".u{display:none}.s{will-change:transform;backface-visibility:hidden}</style>")
               path.write_text(svg)
           PY
       - uses: crazy-max/ghaction-github-pages@df5cc2bfa78282ded844b354faee141f06b41865
