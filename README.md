@@ -9,7 +9,7 @@
 <br clear="both" />
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/morvayo/morvayo/output/snake-dark.svg?v=fluid-purple" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/morvayo/morvayo/output/snake.svg?v=fluid-purple" />
-  <img alt="Contribution snake animation" src="https://raw.githubusercontent.com/morvayo/morvayo/output/snake.svg?v=fluid-purple" width="100%" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/morvayo/morvayo/output/snake-dark.svg?v=contained-purple" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/morvayo/morvayo/output/snake.svg?v=contained-purple" />
+  <img alt="Contribution snake animation" src="https://raw.githubusercontent.com/morvayo/morvayo/output/snake.svg?v=contained-purple" width="100%" />
 </picture>

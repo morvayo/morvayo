@@ -29,10 +29,18 @@ jobs:
           python3 - <<'PY'
           from pathlib import Path
           import re
+          import xml.etree.ElementTree as ET
           for path in Path("dist").glob("*.svg"):
               svg = path.read_text()
-              svg = re.sub(r"\b(\d+)ms\b", lambda match: f"{round(int(match[1]) * 1.4)}ms", svg)
-              svg = re.sub(r"translate\(([^()]+)\)", r"translate3d(\1,0px)", svg)
+              svg = re.sub(r"\b(\d+)ms\b", lambda match: f"{round(int(match[1]) * 1.2)}ms", svg)
+              cells = [element for element in ET.fromstring(svg) if "c" in element.get("class", "").split()]
+              max_x = max(float(cell.get("x")) for cell in cells) - min(float(cell.get("x")) for cell in cells)
+              max_y = max(float(cell.get("y")) for cell in cells) - min(float(cell.get("y")) for cell in cells)
+              def constrain_position(match):
+                  x = min(max(float(match[1]), 0), max_x)
+                  y = min(max(float(match[2]), 0), max_y)
+                  return f"translate3d({x:g}px,{y:g}px,0px)"
+              svg = re.sub(r"translate\((-?[\d.]+)px,(-?[\d.]+)px\)", constrain_position, svg)
               svg = svg.replace("</style>", ".u{display:none}.s{will-change:transform;backface-visibility:hidden}</style>")
               path.write_text(svg)
           PY
